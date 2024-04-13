@@ -55,13 +55,22 @@ export default function TabTwoScreen() {
               </Text>
             </View>
             <View className="flex flex-row space-x-2">
-              <View className=" border flex items-center justify-center border-primary  rounded-full px-4 ">
+              {/* <View className=" border flex items-center justify-center border-primary  rounded-full px-4 ">
                 <Text
                   style={{ lineHeight: 20 }}
                   className="text-xl   text-[#f4604a]  font-extrabold"
                 >
                   one
                 </Text>
+              </View> */}
+               <View
+                className="flex
+               items-center justify-center"
+              >
+                <Image
+                  className="h-10 w-20 object-contain"
+                  source={require("../../assets/images/home/one.png")}
+                />
               </View>
               <View className="bg-[#4d4f54]  rounded-full p-2">
                 <Ionicons name="person" size={24} color="white" />

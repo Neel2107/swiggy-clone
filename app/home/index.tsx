@@ -1,4 +1,5 @@
 import {
+  Image,
   ScrollView,
   Text,
   TextInput,
@@ -22,11 +23,11 @@ export default function TabOneScreen() {
   const inests = useSafeAreaInsets();
   return (
     <View className="flex-1 items-center justify-center">
-        <LinearGradient
-  // Background Linear Gradient
-  colors={["#fff", "#ebebeb"]}
-  style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
->
+      <LinearGradient
+        // Background Linear Gradient
+        colors={["#fff", "#ebebeb"]}
+        style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
+      >
         <View
           style={{ paddingTop: inests.top }}
           className="flex-1 flex flex-col "
@@ -48,13 +49,22 @@ export default function TabOneScreen() {
               </Text>
             </View>
             <View className="flex flex-row space-x-2">
-              <View className=" border flex items-center justify-center border-primary  rounded-full px-4 ">
+              {/* <View className=" border flex items-center justify-center border-primary  rounded-full px-4 ">
                 <Text
                   style={{ lineHeight: 20 }}
                   className="text-xl   text-[#f4604a]  font-extrabold"
                 >
                   one
                 </Text>
+              </View> */}
+              <View
+                className="flex
+               items-center justify-center"
+              >
+                <Image
+                  className="h-10 w-20 object-contain"
+                  source={require("../../assets/images/home/one.png")}
+                />
               </View>
               <View className="bg-[#4d4f54]  rounded-full p-2">
                 <Ionicons name="person" size={24} color="white" />
@@ -79,8 +89,14 @@ export default function TabOneScreen() {
                   </TouchableOpacity>
                 </View>
               </View> */}
-<SearchBarComp/>
-              <Membership />
+              <SearchBarComp />
+              {/* <Membership /> */}
+              <View className="flex items-center mb-4 justify-center">
+                <Image
+                  className="w-[100%] h-32 object-contain  mt-4"
+                  source={require("../../assets/images/home/main-banner.png")}
+                />
+              </View>
               <HomeCards />
             </ScrollView>
           </View>

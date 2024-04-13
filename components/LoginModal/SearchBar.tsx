@@ -6,7 +6,7 @@ const SearchBarComp = () => {
   return (
     <View className="border mt-4 bg-white border-zinc-300 rounded-xl p-4 mx-4 flex flex-row items-center justify-between">
     <TextInput
-      placeholder="Search for food, restaurants"
+      placeholder="Search for Paneer "
       className="text-zinc-500 w-60 text-base"
     />
     <View className="flex flex-row items-center space-x-3">
