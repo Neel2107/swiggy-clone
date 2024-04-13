@@ -1,4 +1,5 @@
 import {
+  Image,
   ScrollView,
   Text,
   TextInput,
@@ -10,7 +11,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { truncateText } from "@/utils/helper";
 import { Ionicons } from "@expo/vector-icons";
-import { Chip } from "react-native-paper";
+import { Chip, Searchbar } from "react-native-paper";
 import HomeCards from "@/components/HomeCards/HomeCards";
 import { StatusBar } from "expo-status-bar";
 import Membership from "@/components/HomeCards/Membership";
@@ -19,6 +20,10 @@ import { FontAwesome6 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import Carousel from "@/components/Carousel/Carousel";
 import CarouselComp from "@/components/Carousel/Carousel";
+import FoodCards from "@/components/FoodCards/FoodCards";
+import FoodOffers from "@/components/FoodCards/FoodOffers";
+import Trusted from "@/components/FoodCards/Trusted";
+import SearchBarComp from "@/components/LoginModal/SearchBar";
 
 export default function TabTwoScreen() {
   const inests = useSafeAreaInsets();
@@ -28,7 +33,7 @@ export default function TabTwoScreen() {
       <LinearGradient
         // Background Linear Gradient
         colors={["#fff0e7", "#fff"]}
-        style={{ position: "absolute", left: 0, right: 0, top: 0 }}
+        style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
       >
         <View
           style={{ paddingTop: inests.top }}
@@ -63,26 +68,16 @@ export default function TabTwoScreen() {
               </View>
             </View>
           </View>
-          <View className="flex flex-col mt-4   ">
-            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
-              <View className="border bg-white border-zinc-300 rounded-xl p-4 mx-4 flex flex-row items-center justify-between">
-                <TextInput
-                  placeholder="Search for food, restaurants"
-                  className="text-zinc-500 w-60 text-base"
-                />
-                <View className="flex flex-row items-center space-x-3">
-                  <TouchableOpacity>
-                    <Fontisto name="search" size={20} color="#6d7072" />
-                  </TouchableOpacity>
-                  <View className="h-[20px] w-[1px] bg-[#cccccc]"></View>
-                  <TouchableOpacity>
-                    <FontAwesome6 name="microphone" size={20} color="#fc801a" />
-                  </TouchableOpacity>
-                </View>
-              </View>
-              <CarouselComp />
-            </ScrollView>
-          </View>
+          <ScrollView
+            style={{ flex: 1 }}
+            contentContainerStyle={{ paddingBottom: 50 }}
+          >
+            <SearchBarComp />
+            <CarouselComp />
+            <FoodCards />
+            <FoodOffers />
+            <Trusted />
+          </ScrollView>
         </View>
       </LinearGradient>
     </View>

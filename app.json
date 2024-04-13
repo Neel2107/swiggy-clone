@@ -32,6 +32,18 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Roboto-Regular.ttf",
+            "./assets/fonts/ProximaNova-Bold.ttf",
+            "./assets/fonts/ProximaNova-Regular.ttf",
+            "./assets/fonts/ProximaNova-Semibold.ttf",
+            "./assets/fonts/ProximaNova-Extrabld.ttf"
+          ]
+        }
+      ],
       "expo-router",
       "@react-native-firebase/app",
       "@react-native-firebase/auth"

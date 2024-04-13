@@ -5,10 +5,21 @@ import Instamart from "../../assets/images/home/instamart.svg";
 import Gifts from "../../assets/images/home/gifts.svg";
 import Minis from "../../assets/images/home/minis.svg";
 import { Link } from "expo-router";
+import { useFonts } from "expo-font";
 const HomeCards = () => {
+
+ const [fontsLoaded, fontError] = useFonts({
+  'ProximaNovaAltRegular': require('../../assets/fonts/ProximaNovaAltRegular.otf'),
+});
+
+console.log("fontError", fontError);
+
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
     <View className="flex mb-4  flex-row items-center justify-evenly">
-      <View className="flex flex-col  space-y-4">
+      <View className="flex flex-col   space-y-4">
         
         <View
           style={{
@@ -23,7 +34,7 @@ const HomeCards = () => {
           }}
           className="rounded-[20px] flex flex-col  bg-white  overflow-hidden "
         >
-          <Text className="text-lg px-3 pt-3 font-extrabold text-[#414345] tracking-[-0.5px]">
+          <Text className="text-lg px-3 pt-3 font-[900] text-[#414345] tracking-[-0.5px]" style={{ fontFamily: 'ProximaNovaAltRegular' }}>
             FOOD DELIVERY
           </Text>
           <Text className="text-sm font-bold px-3 text-zinc-400">
@@ -39,7 +50,7 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
-        <Link href={"/home/dineout"}>
+        {/* <Link className="w-full bg-blue-300" href={"/home/dineout"}> */}
        
         <View
           style={{
@@ -52,7 +63,7 @@ const HomeCards = () => {
             shadowRadius: 20,
             elevation: 3,
           }}
-          className="rounded-[20px] flex flex-col  bg-white  overflow-hidden "
+          className="rounded-[20px] flex flex-col  bg-white w-full   overflow-hidden "
         >
           <Text className="text-lg px-3 pt-3 font-extrabold text-[#414345] tracking-[-0.5px]">
             DINEOUT
@@ -69,7 +80,7 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
-        </Link>
+        {/* </Link> */}
       </View>
       <View className="flex flex-col space-y-4">
         <Link href={"/home/instamart"}>

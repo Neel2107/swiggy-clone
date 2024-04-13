@@ -17,15 +17,16 @@ import Membership from "@/components/HomeCards/Membership";
 import { Fontisto } from "@expo/vector-icons";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import SearchBarComp from "@/components/LoginModal/SearchBar";
 export default function TabOneScreen() {
   const inests = useSafeAreaInsets();
   return (
     <View className="flex-1 items-center justify-center">
-      <LinearGradient
-        // Background Linear Gradient
-        colors={["#fff", "rgba(0,0,0,0.01)"]}
-        style={{ position: "absolute", left: 0, right: 0, top: 0 }}
-      >
+        <LinearGradient
+  // Background Linear Gradient
+  colors={["#fff", "#ebebeb"]}
+  style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
+>
         <View
           style={{ paddingTop: inests.top }}
           className="flex-1 flex flex-col "
@@ -63,7 +64,7 @@ export default function TabOneScreen() {
 
           <View className="flex flex-col mt-4   ">
             <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
-              <View className="border bg-white border-zinc-300 rounded-xl p-4 mx-4 flex flex-row items-center justify-between">
+              {/* <View className="border bg-white border-zinc-300 rounded-xl p-4 mx-4 flex flex-row items-center justify-between">
                 <TextInput
                   placeholder="Search for food, restaurants"
                   className="text-zinc-500 w-60 text-base"
@@ -77,8 +78,8 @@ export default function TabOneScreen() {
                     <FontAwesome6 name="microphone" size={20} color="#fc801a" />
                   </TouchableOpacity>
                 </View>
-              </View>
-
+              </View> */}
+<SearchBarComp/>
               <Membership />
               <HomeCards />
             </ScrollView>
