@@ -1,9 +1,5 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
+
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -11,12 +7,11 @@ import { useEffect } from "react";
 
 import { PaperProvider } from "react-native-paper";
 import {
-  BottomSheetModal,
-  BottomSheetView,
+ 
   BottomSheetModalProvider,
 } from "@gorhom/bottom-sheet";
-import { useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -56,21 +51,22 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  // const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    // <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <PaperProvider theme={{colors: {primary: '#fc801a'}}}>
       <GestureHandlerRootView style={{ flex: 1 }}>
 
         <BottomSheetModalProvider>
           <Stack>
+            {/* <StatusBar style="light" /> */}
             <Stack.Screen name="(login)" options={{ headerShown: false }} />
             <Stack.Screen name="home" options={{ headerShown: false }} />
           </Stack>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
       </PaperProvider>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }

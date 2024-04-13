@@ -3,7 +3,6 @@ import { Link, Tabs } from "expo-router";
 import Swiggy from "../../assets/images/bottom-tab/swiggy-gray.svg";
 import SwiggyInactive from "../../assets/images/bottom-tab/swiggy-inactive.svg";
 import FoodInactive from "../../assets/images/bottom-tab/food-gray.svg";
-import { Text, View } from "react-native";
 
 export default function TabLayout() {
   return (
@@ -14,7 +13,7 @@ export default function TabLayout() {
         tabBarStyle: {
           height: 60,
         },
-        // headerShadowVisible: false,
+      
       }}
     >
       <Tabs.Screen
@@ -22,9 +21,7 @@ export default function TabLayout() {
         options={{
           headerShadowVisible: false,
           title: "Swiggy",
-          
 
-         
           tabBarIcon: ({ color, focused }) =>
             focused ? (
               <Swiggy fontSize={24} color={color} />

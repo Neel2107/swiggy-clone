@@ -10,6 +10,7 @@ import {
   BottomSheetModalProvider,
 } from "@gorhom/bottom-sheet";
 import LoginModal from "@/components/LoginModal/LoginModal";
+import { StatusBar } from "expo-status-bar";
 const LoginScreen = () => {
   // ref
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -29,6 +30,7 @@ const LoginScreen = () => {
   }, []);
   return (
     <View className="flex-1 flex flex-col  bg-white ">
+      <StatusBar style="dark" />
       <BottomSheetModal
         handleIndicatorStyle={{ backgroundColor: "transparent" }}
         backdropComponent={({ style }) => (
