@@ -37,15 +37,17 @@ const VerifyScreen = () => {
 
 const confirmCode = async () => {
   console.log("code", code);
-  if (code.length === 6) {
-    try {
-      await confirmation.confirm(code);
-      route.push("/home/");
-    } catch (error) {
-      console.log(error);
-      ToastAndroid.show("Invalid OTP. Please try again.", ToastAndroid.SHORT);
-    }
-  }
+
+  route.push("/home/");
+  // if (code.length === 6) {
+  //   try {
+  //     await confirmation.confirm(code);
+  //     route.push("/home/");
+  //   } catch (error) {
+  //     console.log(error);
+  //     ToastAndroid.show("Invalid OTP. Please try again.", ToastAndroid.SHORT);
+  //   }
+  // }
 };
 
  

@@ -18,17 +18,17 @@ const isValidNumber = (userPhoneNumber || "").length === 10;
  const route = useRouter();
 
   const signInWithPhoneNumber = async () => {
-    // route.push("/(login)/verify");
-    try {
-      const confirmation = await auth().signInWithPhoneNumber(
-        `+91${userPhoneNumber}`
-      );
-      // console.log("confirmation", confirmation);
-      setConfirmation(confirmation);
-      route.push("/(login)/verify");
-    } catch (error) {
-      console.log(error);
-    }
+    route.push("/(login)/verify");
+    // try {
+    //   const confirmation = await auth().signInWithPhoneNumber(
+    //     `+91${userPhoneNumber}`
+    //   );
+    //   // console.log("confirmation", confirmation);
+    //   setConfirmation(confirmation);
+    //   route.push("/(login)/verify");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

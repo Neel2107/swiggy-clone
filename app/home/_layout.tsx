@@ -3,7 +3,11 @@ import { Link, Tabs } from "expo-router";
 import Swiggy from "../../assets/images/bottom-tab/swiggy-gray.svg";
 import SwiggyInactive from "../../assets/images/bottom-tab/swiggy-inactive.svg";
 import FoodInactive from "../../assets/images/bottom-tab/food-gray.svg";
-
+import FoodInactive2 from "../../assets/images/bottom-tab/food-gray-2.svg";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 export default function TabLayout() {
   return (
     <Tabs
@@ -11,9 +15,19 @@ export default function TabLayout() {
         headerShown: false,
         tabBarActiveTintColor: "#36393c",
         tabBarStyle: {
-          height: 60,
+          height: 65,
+          elevation: 10, // for Android
+          shadowOpacity: 0.5, // for iOS
+          shadowRadius: 10, // for iOS
+          shadowColor: "#000", // for iOS
+          shadowOffset: { width: 0, height: -2 },
         },
-      
+
+        tabBarLabelStyle: {
+          fontSize: 14,
+          marginBottom: 3,
+          fontWeight: "500",
+        },
       }}
     >
       <Tabs.Screen
@@ -24,9 +38,9 @@ export default function TabLayout() {
 
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Swiggy fontSize={24} color={color} />
+              <Swiggy fontSize={20} color={color} />
             ) : (
-              <SwiggyInactive fontSize={24} color={color} />
+              <SwiggyInactive fontSize={20} color={color} />
             ),
         }}
       />
@@ -34,11 +48,12 @@ export default function TabLayout() {
         name="food"
         options={{
           title: "Food",
+          tabBarLabel: "Food",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="fast-food" size={30} color="#36393c" />
             ) : (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="fast-food-outline" size={30} color="#93959F" />
             ),
         }}
       />
@@ -46,11 +61,12 @@ export default function TabLayout() {
         name="instamart"
         options={{
           title: "instamart",
+          tabBarLabel: "Instamart",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="cart-sharp" size={30} color="#36393c" />
             ) : (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="cart-outline" size={30} color="#93959F" />
             ),
         }}
       />
@@ -58,11 +74,16 @@ export default function TabLayout() {
         name="dineout"
         options={{
           title: "dineout",
+          tabBarLabel: "Dineout",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <FoodInactive fontSize={24} color={color} />
+              <MaterialCommunityIcons name="medal" size={30} color="#36393c" />
             ) : (
-              <FoodInactive fontSize={24} color={color} />
+              <MaterialCommunityIcons
+                name="medal-outline"
+                size={30}
+                color="#93959F"
+              />
             ),
         }}
       />
@@ -70,11 +91,12 @@ export default function TabLayout() {
         name="credit-card"
         options={{
           title: "credit-card",
+          tabBarLabel: "Credit Card",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="card" size={30} color="#36393c" />
             ) : (
-              <FoodInactive fontSize={24} color={color} />
+              <Ionicons name="card-outline" size={30} color="#93959F" />
             ),
         }}
       />

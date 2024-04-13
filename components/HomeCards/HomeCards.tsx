@@ -4,10 +4,12 @@ import Dineout from "../../assets/images/home/dineout.svg";
 import Instamart from "../../assets/images/home/instamart.svg";
 import Gifts from "../../assets/images/home/gifts.svg";
 import Minis from "../../assets/images/home/minis.svg";
+import { Link } from "expo-router";
 const HomeCards = () => {
   return (
     <View className="flex mb-4  flex-row items-center justify-evenly">
       <View className="flex flex-col  space-y-4">
+        
         <View
           style={{
             shadowColor: "#000",
@@ -37,6 +39,8 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
+        <Link href={"/home/dineout"}>
+       
         <View
           style={{
             shadowColor: "#000",
@@ -65,8 +69,11 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
+        </Link>
       </View>
       <View className="flex flex-col space-y-4">
+        <Link href={"/home/instamart"}>
+      
         <View
           style={{
             shadowColor: "#000",
@@ -95,6 +102,11 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
+        </Link>
+
+       
+
+       
         <View
           style={{
             shadowColor: "#000",
@@ -121,6 +133,7 @@ const HomeCards = () => {
             </View>
           </View>
         </View>
+        
         <View
           style={{
             shadowColor: "#000",
