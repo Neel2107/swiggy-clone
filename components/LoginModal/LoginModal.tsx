@@ -2,14 +2,34 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { TextInput } from "react-native-paper";
 import { useRouter } from "expo-router";
+import auth from "@react-native-firebase/auth";
+import firestore from "@react-native-firebase/firestore";
+import { useAppContext } from "@/context/AppContext";
 
 interface LoginModalProps {
   handleModalDismiss: () => void;
 }
 const LoginModal: React.FC<LoginModalProps> = ({ handleModalDismiss }) => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const isValidNumber = phoneNumber.length === 10;
-  const route = useRouter();
+  const { setConfirmation, userPhoneNumber,
+    setUserPhoneNumber, } = useAppContext();
+  // const [phoneNumber, setPhoneNumber] = useState("");
+
+const isValidNumber = (userPhoneNumber || "").length === 10; 
+ const route = useRouter();
+
+  const signInWithPhoneNumber = async () => {
+    // route.push("/(login)/verify");
+    try {
+      const confirmation = await auth().signInWithPhoneNumber(
+        `+91${userPhoneNumber}`
+      );
+      // console.log("confirmation", confirmation);
+      setConfirmation(confirmation);
+      route.push("/(login)/verify");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <View className="flex-1 flex flex-col space-y-4">
@@ -22,7 +42,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ handleModalDismiss }) => {
         <View className="flex flex-col   my-5 ">
           <Text className="font-semibold text-zinc-500">PHONE NUMBER</Text>
           <TextInput
-            onChangeText={setPhoneNumber}
+            onChangeText={setUserPhoneNumber}
             mode="flat"
             cursorColor="#fc801a"
             inputMode="numeric"
@@ -36,7 +56,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ handleModalDismiss }) => {
             maxLength={10}
             activeUnderlineColor="#fc801a"
             underlineColor="#fc801a"
-            value={phoneNumber}
+            value={userPhoneNumber}
             style={{ height: 30 }}
             className=" p-0"
             contentStyle={{ paddingLeft: 40 }}
@@ -51,7 +71,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ handleModalDismiss }) => {
           disabled={!isValidNumber}
           onPress={() => {
             handleModalDismiss();
-            route.push("/(login)/verify");
+            signInWithPhoneNumber();
           }}
         >
           <Text className="font-semibold text-base text-white">CONTINUE</Text>

@@ -12,6 +12,7 @@ import {
 } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
+import { AppProvider } from "@/context/AppContext";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -57,6 +58,7 @@ function RootLayoutNav() {
     // <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <PaperProvider theme={{colors: {primary: '#fc801a'}}}>
       <GestureHandlerRootView style={{ flex: 1 }}>
+<AppProvider>
 
         <BottomSheetModalProvider>
           <Stack>
@@ -65,6 +67,7 @@ function RootLayoutNav() {
             <Stack.Screen name="home" options={{ headerShown: false }} />
           </Stack>
         </BottomSheetModalProvider>
+</AppProvider>
       </GestureHandlerRootView>
       </PaperProvider>
     // </ThemeProvider>

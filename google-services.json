@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104348078242",
+    "project_id": "swiggyclone-1ccb5",
+    "storage_bucket": "swiggyclone-1ccb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104348078242:android:c7a66c7b0755d6fdf887fb",
+        "android_client_info": {
+          "package_name": "com.neel1508.swiggyuiclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8kNepIUULe6hMnDhltMetKwTC06xAWzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
