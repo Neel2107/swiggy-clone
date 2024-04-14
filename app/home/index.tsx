@@ -32,7 +32,7 @@ export default function TabOneScreen() {
           style={{ paddingTop: inests.top }}
           className="flex-1 min-h-screen flex flex-col "
         >
-          <View className="flex mt-2 flex-row justify-between px-4 items-center">
+          <View className="flex mt-2 flex-row justify-between pb-1 px-4 items-center">
             <View className="flex flex-col">
               <View className="flex flex-row items-center ">
                 <FontAwesome5 name="location-arrow" size={17} color="#fc801a" />

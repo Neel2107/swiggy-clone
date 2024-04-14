@@ -37,7 +37,7 @@ export default function TabTwoScreen() {
           style={{ paddingTop: inests.top }}
           className="flex-1 min-h-screen flex flex-col "
         >
-          <View className="flex mt-2 flex-row justify-between px-4 items-center">
+          <View className="flex mt-2 flex-row justify-between pb-1 px-4 items-center">
             <View className="flex space-x-2 flex-row">
               <View className="flex flex-col px-2 rounded-[8px] bg-primary">
                 <Text className="text-base text-center font-bold text-white">
