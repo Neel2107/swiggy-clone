@@ -47,7 +47,7 @@ const CarouselComp = () => {
 
         onConfigurePanGesture={(g) => g.enabled(false)}
         pagingEnabled={true}
-        onSnapToItem={(index) => console.log("current index:", index)}
+        // onSnapToItem={(index) => console.log("current index:", index)}
         renderItem={({ item }) => (
           <View className="border border-zinc-200 rounded-md w-[92%]">
           <Image

@@ -73,7 +73,7 @@ const Exclusive = () => {
     <View className="ml-4  pt-4 flex flex-col space-y-4">
       <View className="flex flex-row items-center justify-between">
         <View className="flex flex-row items-center space-x-2">
-          <Text className="text-lg font-bold tracking-widest">
+          <Text className="text-base font-bold tracking-widest">
             TRENDING NEAR YOU
           </Text>
           <LinearGradient

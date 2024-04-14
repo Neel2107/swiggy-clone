@@ -23,7 +23,7 @@ const SingleItemCard = () => {
           {item.title}
         </Text>
         <View className="">
-          <Image className="  w-[170px] h-[170px]" source={item.img} />
+          <Image className="  w-[140px] h-[140px]" source={item.img} />
         </View>
       </View>
     );

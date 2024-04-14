@@ -17,7 +17,7 @@ const InstamartCards = () => {
         <View className="rounded-[25px] bg-[#ffd4eb] overflow-hidden">
           <Image
             style={{ borderRadius: 20 }}
-            className=" flex justify-end  rounded-md w-[100px] h-[100px]"
+            className=" flex justify-end  rounded-md w-[90px] h-[90px]"
             source={item.img}
           />
         </View>
@@ -28,17 +28,7 @@ const InstamartCards = () => {
 
   return (
     <View className="ml-4  pt-4 flex flex-col space-y-4">
-      {/* <View className="flex flex-row items-center space-x-2">
-        <Text className="text-lg font-bold tracking-widest">
-          YOUR TRUSTED PICKS
-        </Text>
-        <LinearGradient
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          colors={["#bcbcc7", "#a8a8b7", "#fff"]}
-          style={{ height: 1, width: "40%" }}
-        />
-      </View> */}
+      
       <View>
         <FlatList
           data={InstamartCardsData}

@@ -44,7 +44,7 @@ export default function TabOneScreen() {
                 </View>
               </View>
               <Text className="text-zinc-500">
-                {truncateText("1920, Calyso, Candenza, Kuldu Main Road", 36)}
+                {truncateText("1920, Calyso, Candenza, Kuldu Main Road", 30)}
               </Text>
             </View>
             <View className="flex flex-row space-x-2">

@@ -10,7 +10,7 @@ import { LinearGradient } from "expo-linear-gradient";
 const HomeCards = () => {
   const route = useRouter();
   return (
-    <View className="flex mb-4  flex-row items-center justify-evenly">
+    <View className="flex mb-4  flex-row  justify-evenly">
       <View className="flex flex-col   space-y-4">
         <TouchableOpacity
           activeOpacity={0.8}
@@ -41,15 +41,15 @@ const HomeCards = () => {
             style={{ borderRadius: 20, marginLeft: 5 }}
           >
             <View style={{ overflow: "hidden" }}>
-              <Text className="text-sm font-bold px-3 text-primary">
+              <Text className="text-xs font-bold px-3 text-primary">
                 UP TO 60% OFF + FREE DEL
               </Text>
             </View>
           </LinearGradient>
-          <View className="h-48 relative overflow-hidden">
+          <View className="h-36 relative overflow-hidden">
             <View className="absolute -bottom-10 -right-10">
               <Image
-                className="h-48 w-48 object-contain"
+                className="h-36 w-36 object-contain"
                 source={require("../../assets/images/home/home.png")}
               />
             </View>
@@ -83,11 +83,11 @@ const HomeCards = () => {
             colors={["transparent", "#f2641d3d"]}
             style={{ borderRadius: 20, marginLeft: 5, marginTop: 5 }}
           >
-            <Text className="text-sm font-bold px-3  text-primary">
+            <Text className="text-xs font-bold px-3  text-primary">
               FLAT 50% OFF
             </Text>
           </LinearGradient>
-          <View className="h-36 relative overflow-hidden">
+          <View className="h-28 relative overflow-hidden">
             <View className="absolute -bottom-0 -right-0">
               <Dineout />
             </View>
@@ -122,11 +122,11 @@ const HomeCards = () => {
             colors={["transparent", "#f2641d3d"]}
             style={{ borderRadius: 20, marginLeft: 5, marginTop: 10 }}
           >
-            <Text className="text-sm font-bold px-3 text-primary">
+            <Text className="text-xs font-bold px-3 text-primary">
               FREE DELIVERY
             </Text>
           </LinearGradient>
-          <View className="h-36 relative overflow-hidden">
+          <View className="h-24 relative overflow-hidden">
             <View className="absolute -bottom-5 -right-0">
               <Instamart />
             </View>
@@ -153,7 +153,7 @@ const HomeCards = () => {
             PICK-UP & DROP
           </Text>
 
-          <View className="h-20 relative overflow-hidden">
+          <View className="h-10 relative overflow-hidden">
             <View className="absolute -bottom-7 -right-5">
               <Gifts />
             </View>

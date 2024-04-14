@@ -4,9 +4,9 @@ import { LinearGradient } from "expo-linear-gradient";
 
 const FoodOffers = () => {
   return (
-    <View className="mx-4  pt-4 flex flex-col space-y-4">
+    <View className="mx-4  pt-4 flex flex-col space-y-2">
       <View className="flex flex-row items-center space-x-2">
-        <Text className="text-lg font-bold tracking-widest">
+        <Text className="text-base font-bold tracking-widest">
           OFFERS FOR YOU
         </Text>
         <LinearGradient
@@ -26,7 +26,7 @@ const FoodOffers = () => {
           <View className="flex flex-row  items-center ">
             <Image
               source={require("../../assets/images/food-page/user.png")}
-              className="h-20 w-20 rounded-full"
+              className="h-16 w-16 rounded-full"
             />
             <View className="flex flex-col ">
               <Text className="text-lg font-extrabold text-primary">
@@ -46,7 +46,7 @@ const FoodOffers = () => {
           <View className="flex flex-row  items-center  space-x-4 ">
             <Image
               source={require("../../assets/images/food-page/box.png")}
-              className="h-16 w-16 rounded-full"
+              className="h-12 w-12 rounded-full"
             />
             <View className="flex flex-col ">
               <Text className="text-lg font-extrabold text-[#0653bb]">

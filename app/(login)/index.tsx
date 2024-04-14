@@ -95,7 +95,7 @@ const LoginScreen = () => {
         >
           <Text className="font-semibold text-base text-white">LOGIN</Text>
         </TouchableOpacity>
-        <Text className="text-sm pl-2 text-zinc-500 mt-3">
+        <Text className="text-xs pl-2 text-zinc-500 mt-3">
           By clicking, I accept the{" "}
           <Text className="font-semibold text-black">Terms & Conditions</Text> &{" "}
           <Text className="font-semibold text-black">Privacy Policy</Text>

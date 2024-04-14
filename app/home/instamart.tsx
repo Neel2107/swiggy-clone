@@ -48,14 +48,14 @@ export default function TabTwoScreen() {
               <View className="flex flex-col">
                 <View className="flex flex-row items-center ">
                   <Text className="text-base font-bold">
-                    {truncateText("Delivery to Salarpuria Sattava College", 30)}
+                    {truncateText("Delivery to Salarpuria Sattava College", 26)}
                   </Text>
                   <View className="mt-1 ml-2">
                     <Feather name="chevron-down" size={17} color="#121212" />
                   </View>
                 </View>
                 <Text className="text-zinc-500">
-                  {truncateText("1920, Calyso, Candenza, Kuldu Main Road", 36)}
+                  {truncateText("1920, Calyso, Candenza, Kuldu Main Road", 30)}
                 </Text>
               </View>
             </View>
@@ -71,9 +71,9 @@ export default function TabTwoScreen() {
           >
             <SearchBarComp />
             {/* <CarouselComp /> */}
-            <View className="flex items-center justify-center">
+            <View className="flex items-center  justify-center">
               <Image
-                className="w-[100%] h-32 object-contain  mt-4"
+                className="w-[100%] h-28 object-contain  mt-4"
                 source={require("../../assets/images/instamart/mega-fest.png")}
               />
             </View>
