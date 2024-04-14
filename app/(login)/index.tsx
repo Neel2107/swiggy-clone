@@ -78,8 +78,8 @@ const LoginScreen = () => {
           }}
         >
           <Image
-            source={require("../../assets/images/login/burger.png")}
-            className="w-32 h-32"
+            source={require("../../assets/images/login/wrap.png")}
+            className="w-28 h-28"
           />
         </View>
       </View>

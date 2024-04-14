@@ -17,7 +17,7 @@ const InstamartCards = () => {
         <View className="rounded-[25px] bg-[#ffd4eb] overflow-hidden">
           <Image
             style={{ borderRadius: 20 }}
-            className=" flex justify-end  rounded-md w-[128px] h-[128px]"
+            className=" flex justify-end  rounded-md w-[100px] h-[100px]"
             source={item.img}
           />
         </View>

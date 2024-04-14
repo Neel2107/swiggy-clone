@@ -12,19 +12,18 @@ interface FoodCard {
 const SingleItemCard = () => {
   const renderItem = ({ item }: { item: FoodCard }) => {
     return (
-      <View className="relative  mx-2">
-        <View className="rounded-[20px] bg-[#85155f] overflow-hidden flex flex-col space-y-2 p-2">
+      <View className="rounded-[20px] bg-[#85155f] flex flex-col  space-y-2 mx-2">
         <Text className="text-center text-xs font-extrabold text-[#fff] mt-2">
-            {item.offer}
-          </Text>
-          <Text className="text-center text-xl font-extrabold text-[#fff] ">
-            {item.title}
-          </Text>
-          <Image
-            style={{ borderRadius: 20 }}
-            className=" flex justify-end  rounded-md w-[150px] h-[150px]"
-            source={item.img}
-          />
+          {item.offer}
+        </Text>
+        <Text
+          className="text-center  text-xl font-extrabold text-[#fff] "
+          style={{ lineHeight: 20 }}
+        >
+          {item.title}
+        </Text>
+        <View className="">
+          <Image className="  w-[170px] h-[170px]" source={item.img} />
         </View>
       </View>
     );

@@ -13,7 +13,7 @@ const Membership = () => {
           },
           shadowOpacity: 0.02,
           shadowRadius: 20,
-          elevation: 3,
+          elevation: 2,
         }}
         className="bg-purple-50 p-4 flex flex-row justify-between h-full rounded-[20px]"
       >

@@ -21,6 +21,7 @@ import SearchBarComp from "@/components/LoginModal/SearchBar";
 import InstamartCards from "@/components/Instamart/InstamartCards";
 import MidBanner from "@/components/Instamart/MidBanner";
 import SingleItemCard from "@/components/Instamart/SingleItemCard";
+import Exclusive from "@/components/Instamart/Exclusive";
 
 export default function TabTwoScreen() {
   const inests = useSafeAreaInsets();
@@ -66,7 +67,7 @@ export default function TabTwoScreen() {
           </View>
           <ScrollView
             style={{ flex: 1 }}
-            contentContainerStyle={{ paddingBottom: 50 }}
+            contentContainerStyle={{ paddingBottom: 80 }}
           >
             <SearchBarComp />
             {/* <CarouselComp /> */}
@@ -85,6 +86,7 @@ export default function TabTwoScreen() {
               />
             </View>
             <SingleItemCard />
+            <Exclusive />
             {/* <FoodCards /> */}
             {/* <FoodOffers /> */}
           </ScrollView>

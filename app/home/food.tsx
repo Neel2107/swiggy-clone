@@ -24,6 +24,9 @@ import FoodCards from "@/components/FoodCards/FoodCards";
 import FoodOffers from "@/components/FoodCards/FoodOffers";
 import Trusted from "@/components/FoodCards/Trusted";
 import SearchBarComp from "@/components/LoginModal/SearchBar";
+import One from "../../assets/images/header/one.svg"
+import YourMind from "@/components/FoodCards/YourMind";
+
 
 export default function TabTwoScreen() {
   const inests = useSafeAreaInsets();
@@ -60,10 +63,7 @@ export default function TabTwoScreen() {
                 className="flex
                items-center justify-center"
               >
-                <Image
-                  className="h-10 w-20 object-contain"
-                  source={require("../../assets/images/home/one.png")}
-                />
+                <One />
               </View>
               <View className="bg-[#4d4f54]  rounded-full p-2">
                 <Ionicons name="person" size={24} color="white" />
@@ -72,13 +72,14 @@ export default function TabTwoScreen() {
           </View>
           <ScrollView
             style={{ flex: 1 }}
-            contentContainerStyle={{ paddingBottom: 50 }}
+            contentContainerStyle={{ paddingBottom: 80 }}
           >
             <SearchBarComp />
             <CarouselComp />
             <FoodCards />
             <FoodOffers />
             <Trusted />
+            <YourMind />
           </ScrollView>
         </View>
       </LinearGradient>

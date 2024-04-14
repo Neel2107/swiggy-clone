@@ -8,6 +8,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import FoodActive from "../../assets/images/bottom-tab/food-active.svg";
+import Food from "../../assets/images/bottom-tab/food-gray.svg";
 export default function TabLayout() {
   return (
     <Tabs
@@ -51,9 +53,9 @@ export default function TabLayout() {
           tabBarLabel: "Food",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Ionicons name="fast-food" size={30} color="#36393c" />
+             <FoodActive fontSize={20} color={color} />
             ) : (
-              <Ionicons name="fast-food-outline" size={30} color="#93959F" />
+             <Food fontSize={20} color={color}/>
             ),
         }}
       />

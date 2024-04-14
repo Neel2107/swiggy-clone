@@ -61,9 +61,9 @@ const confirmCode = async () => {
           <Text className="text-xl text-[#292c42] font-bold">
             VERIFY DETAILS
           </Text>
-          <Text className="text-sm mt-2 text-[#8b8a8d] ">
+        {userPhoneNumber &&  <Text className="text-sm mt-2 text-[#8b8a8d] ">
             OTP sent to {userPhoneNumber}
-          </Text>
+          </Text>}
         </View>
         <View className="self-end ">
           <Verify fontSize={24} />

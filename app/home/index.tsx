@@ -11,14 +11,13 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { truncateText } from "@/utils/helper";
 import { Ionicons } from "@expo/vector-icons";
-import { Chip } from "react-native-paper";
+
 import HomeCards from "@/components/HomeCards/HomeCards";
 import { StatusBar } from "expo-status-bar";
-import Membership from "@/components/HomeCards/Membership";
-import { Fontisto } from "@expo/vector-icons";
-import { FontAwesome6 } from "@expo/vector-icons";
+
 import { LinearGradient } from "expo-linear-gradient";
 import SearchBarComp from "@/components/LoginModal/SearchBar";
+import One from "../../assets/images/header/one.svg"
 export default function TabOneScreen() {
   const inests = useSafeAreaInsets();
   return (
@@ -61,10 +60,8 @@ export default function TabOneScreen() {
                 className="flex
                items-center justify-center"
               >
-                <Image
-                  className="h-10 w-20 object-contain"
-                  source={require("../../assets/images/home/one.png")}
-                />
+                <One />
+                
               </View>
               <View className="bg-[#4d4f54]  rounded-full p-2">
                 <Ionicons name="person" size={24} color="white" />
