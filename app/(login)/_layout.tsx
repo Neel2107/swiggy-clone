@@ -16,7 +16,6 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
   const route = useRouter();
 
   return (
@@ -25,11 +24,16 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "",
-          headerLeft: () => (
-            <TouchableOpacity className="">
-              <AntDesign name="arrowleft" size={24} color="#848692" />
-            </TouchableOpacity>
-          ),
+          // headerLeft: () => (
+          //   <TouchableOpacity className="">
+          //     <AntDesign name="arrowleft" size={24} color="#848692" />
+          //   </TouchableOpacity>
+          // ),
+          headerRight: () => (
+            <Link href={"/verify"} asChild={true}>
+              <Text className="text-zinc-500">Skip</Text>
+            </Link>
+          )
         }}
       />
       <Stack.Screen
@@ -43,44 +47,14 @@ export default function TabLayout() {
               <AntDesign name="arrowleft" size={24} color="#848692" />
             </TouchableOpacity>
           ),
+          headerRight: () => (
+            <Link href={"/home/"} asChild={true}>
+              <Text className="text-zinc-500">Skip</Text>
+            </Link>
+          )
         }}
       />
     </Stack>
   );
 }
 
-{
-  /* <Tabs
-screenOptions={{
-  tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-  // Disable the static render of the header on web
-  // to prevent a hydration error in React Navigation v6.
-  headerShown: useClientOnlyValue(false, true),
-}}
->
-<Tabs.Screen
-  name="index"
-  options={{
-    title: "",
-    headerLeft: () => (
-      <TouchableOpacity className="px-4">
-        <AntDesign name="arrowleft" size={24} color="#848692" />
-      </TouchableOpacity>
-    ),
-    // remove the tabBarIcon property
-  }}
-/>
-<Tabs.Screen
-  name="verify"
-  options={{
-    title: "",
-    // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-    headerLeft: () => (
-      <TouchableOpacity>
-        <Text>back</Text>
-      </TouchableOpacity>
-    ),
-  }}
-/>
-</Tabs> */
-}

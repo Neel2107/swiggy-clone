@@ -55,14 +55,7 @@ export default function TabTwoScreen() {
               </Text>
             </View>
             <View className="flex flex-row space-x-2">
-              {/* <View className=" border flex items-center justify-center border-primary  rounded-full px-4 ">
-                <Text
-                  style={{ lineHeight: 20 }}
-                  className="text-xl   text-[#f4604a]  font-extrabold"
-                >
-                  one
-                </Text>
-              </View> */}
+             
                <View
                 className="flex
                items-center justify-center"

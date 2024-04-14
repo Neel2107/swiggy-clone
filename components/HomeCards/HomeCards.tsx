@@ -5,22 +5,15 @@ import Instamart from "../../assets/images/home/instamart.svg";
 import Gifts from "../../assets/images/home/gifts.svg";
 import Minis from "../../assets/images/home/minis.svg";
 import { Link } from "expo-router";
-import { useFonts } from "expo-font";
+
+
 const HomeCards = () => {
 
- const [fontsLoaded, fontError] = useFonts({
-  'ProximaNovaAltRegular': require('../../assets/fonts/ProximaNovaAltRegular.otf'),
-});
-
-console.log("fontError", fontError);
-
-  if (!fontsLoaded) {
-    return null;
-  }
+  
+  
   return (
     <View className="flex mb-4  flex-row items-center justify-evenly">
       <View className="flex flex-col   space-y-4">
-        
         <View
           style={{
             shadowColor: "#000",
@@ -34,7 +27,13 @@ console.log("fontError", fontError);
           }}
           className="rounded-[20px] flex flex-col  bg-white  overflow-hidden "
         >
-          <Text className="text-lg px-3 pt-3 font-[900] text-[#414345] tracking-[-0.5px]" style={{ fontFamily: 'ProximaNovaAltRegular' }}>
+          <Text
+            className="text-lg px-3 pt-3 text-[#414345] tracking-[-0.5px]"
+            style={{
+            
+              fontFamily: 'ProximaNovaCondensedBold',
+            }}
+          >
             FOOD DELIVERY
           </Text>
           <Text className="text-sm font-bold px-3 text-zinc-400">
@@ -45,13 +44,16 @@ console.log("fontError", fontError);
             UP TO 60% OFF + FREE DEL
           </Text>
           <View className="h-48 relative overflow-hidden">
-            <View className="absolute -bottom-10 -right-5">
-              <Image source={require("../../assets/images/home/healty.png")} />
+            <View className="absolute -bottom-10 -right-10">
+              <Image
+                className="h-48 w-48 object-contain"
+                source={require("../../assets/images/home/home.png")}
+              />
             </View>
           </View>
         </View>
-        {/* <Link className="w-full bg-blue-300" href={"/home/dineout"}> */}
        
+
         <View
           style={{
             shadowColor: "#000",
@@ -80,44 +82,40 @@ console.log("fontError", fontError);
             </View>
           </View>
         </View>
-        {/* </Link> */}
+        
       </View>
       <View className="flex flex-col space-y-4">
         <Link href={"/home/instamart"}>
-      
-        <View
-          style={{
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.02,
-            shadowRadius: 20,
-            elevation: 3,
-          }}
-          className="rounded-[20px] flex flex-col  bg-white  overflow-hidden "
-        >
-          <Text className="text-lg px-3 pt-3 font-extrabold text-[#414345] tracking-[-0.5px]">
-            INSTAMART
-          </Text>
-          <Text className="text-sm font-bold px-3 text-zinc-400">
-            FESTIVAL ESSNETIALS
-          </Text>
-          <Text className="text-sm font-bold px-3 text-primary">
-            FREE DELIVERY
-          </Text>
-          <View className="h-36 relative overflow-hidden">
-            <View className="absolute -bottom-5 -right-0">
-              <Instamart />
+          <View
+            style={{
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.02,
+              shadowRadius: 20,
+              elevation: 3,
+            }}
+            className="rounded-[20px] flex flex-col  bg-white  overflow-hidden "
+          >
+            <Text className="text-lg px-3 pt-3 font-extrabold text-[#414345] tracking-[-0.5px]">
+              INSTAMART
+            </Text>
+            <Text className="text-sm font-bold px-3 text-zinc-400">
+              FESTIVAL ESSNETIALS
+            </Text>
+            <Text className="text-sm font-bold px-3 text-primary">
+              FREE DELIVERY
+            </Text>
+            <View className="h-36 relative overflow-hidden">
+              <View className="absolute -bottom-5 -right-0">
+                <Instamart />
+              </View>
             </View>
           </View>
-        </View>
         </Link>
 
-       
-
-       
         <View
           style={{
             shadowColor: "#000",
@@ -144,7 +142,7 @@ console.log("fontError", fontError);
             </View>
           </View>
         </View>
-        
+
         <View
           style={{
             shadowColor: "#000",

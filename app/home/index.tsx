@@ -23,6 +23,7 @@ export default function TabOneScreen() {
   const inests = useSafeAreaInsets();
   return (
     <View className="flex-1 items-center justify-center">
+      <StatusBar style="dark" />
       <LinearGradient
         // Background Linear Gradient
         colors={["#fff", "#ebebeb"]}
@@ -30,9 +31,8 @@ export default function TabOneScreen() {
       >
         <View
           style={{ paddingTop: inests.top }}
-          className="flex-1 flex flex-col "
+          className="flex-1 min-h-screen flex flex-col "
         >
-          <StatusBar style="dark" />
           <View className="flex mt-2 flex-row justify-between px-4 items-center">
             <View className="flex flex-col">
               <View className="flex flex-row items-center ">
@@ -72,23 +72,9 @@ export default function TabOneScreen() {
             </View>
           </View>
 
-          <View className="flex flex-col mt-4   ">
+          <View className="flex flex-col    ">
             <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
-              {/* <View className="border bg-white border-zinc-300 rounded-xl p-4 mx-4 flex flex-row items-center justify-between">
-                <TextInput
-                  placeholder="Search for food, restaurants"
-                  className="text-zinc-500 w-60 text-base"
-                />
-                <View className="flex flex-row items-center space-x-3">
-                  <TouchableOpacity>
-                    <Fontisto name="search" size={20} color="#6d7072" />
-                  </TouchableOpacity>
-                  <View className="h-[20px] w-[1px] bg-[#cccccc]"></View>
-                  <TouchableOpacity>
-                    <FontAwesome6 name="microphone" size={20} color="#fc801a" />
-                  </TouchableOpacity>
-                </View>
-              </View> */}
+          
               <SearchBarComp />
               {/* <Membership /> */}
               <View className="flex items-center mb-4 justify-center">

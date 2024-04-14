@@ -37,10 +37,15 @@
         {
           "fonts": [
             "./assets/fonts/Roboto-Regular.ttf",
+            "./assets/fonts/Roboto-Bold.ttf",
             "./assets/fonts/ProximaNova-Bold.ttf",
             "./assets/fonts/ProximaNova-Regular.ttf",
+            "./assets/fonts/ProximaNova-Extrabld.ttf",
             "./assets/fonts/ProximaNova-Semibold.ttf",
-            "./assets/fonts/ProximaNova-Extrabld.ttf"
+            "./assets/fonts/ProximaNovaAltLight.otf",
+            "./assets/fonts/ProximaNovaAltRegular.otf",
+            "./assets/fonts/ProximaNovaBold.otf",
+            "./assets/fonts/ProximaNovaCondensedBold.otf"
           ]
         }
       ],
